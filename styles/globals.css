@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(270deg, #1f1f3f, #2a2a5a, #1f1f3f);
+  background-size: 600% 600%;
+  animation: gradient-wave 20s ease infinite;
+  min-height: 100vh;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes gradient-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  @apply bg-dark-card border border-white/10 backdrop-blur-md rounded-2xl shadow-lg;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 0 20px rgba(138, 63, 252, 0.5);
+  transform: translateY(-5px);
+}
+
+.btn {
+  @apply px-8 py-4 text-lg font-bold rounded-full cursor-pointer transition-all duration-300 shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-neon-blue text-dark-bg;
+}
+
+.btn-primary:hover {
+  @apply bg-neon-purple text-white;
+  box-shadow: 0 0 25px rgba(88, 166, 255, 0.5);
+}
+
+.btn-secondary {
+  @apply bg-neon-purple text-dark-bg;
+}
+
+.btn-secondary:hover {
+  @apply bg-neon-blue text-white;
+  box-shadow: 0 0 25px rgba(138, 63, 252, 0.5);
+}
