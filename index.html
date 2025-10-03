@@ -3,201 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IronWatch Security</title>
+  <title>IronWatch Security - Futuristic Discord Bot</title>
+  <meta name="description" content="IronWatch Security - Advanced Discord Moderation & Security Bot with premium features and sleek UI." />
+  <meta name="keywords" content="Discord, Bot, Moderation, Security, Giveaway, Tickets, Role Management" />
+  <meta name="author" content="IronWatch Team" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar glass-card">
+  <nav class="navbar glass-card" role="navigation" aria-label="Main Navigation">
     <div class="container">
-      <div class="logo">IronWatch Security</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#commands">Commands</a></li>
-        <li><a href="#showcase">Showcase</a></li>
-        <li><a href="#support">Support</a></li>
+      <div class="logo" tabindex="0">IronWatch Security</div>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="#hero" role="menuitem" tabindex="0">Home</a></li>
+        <li role="none"><a href="#features" role="menuitem" tabindex="0">Features</a></li>
+        <li role="none"><a href="#commands" role="menuitem" tabindex="0">Commands</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem" tabindex="0">Testimonials</a></li>
+        <li role="none"><a href="#faq" role="menuitem" tabindex="0">FAQ</a></li>
+        <li role="none"><a href="#demo" role="menuitem" tabindex="0">Demo</a></li>
       </ul>
       <div class="nav-ctas">
-        <a href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🚀 Invite Bot</a>
-        <a href="https://discord.gg/EUUUvWfkEB" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">💬 Join Support</a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Invite IronWatch Security Bot">🚀 Invite Bot</a>
+        <a href="https://discord.gg/EUUUvWfkEB" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Join Support Server">💬 Join Support</a>
       </div>
-      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false" role="switch">🌗</button>
     </div>
   </nav>
 
-  <header class="hero" id="hero">
+  <header class="hero" id="hero" role="banner">
     <div class="container">
-      <div class="hero-content glass-card">
+      <div class="hero-content glass-card" tabindex="0">
         <h1 class="title">IronWatch Security</h1>
-        <p class="subtitle">Advanced Discord Moderation &amp; Security</p>
+        <p class="subtitle">Advanced Discord Moderation &amp; Security with Premium Features</p>
         <div class="buttons">
-          <a href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🚀 Invite Bot</a>
-          <a href="https://discord.gg/EUUUvWfkEB" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">💬 Join Support</a>
+          <a href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Invite IronWatch Security Bot">🚀 Invite Bot</a>
+          <a href="https://discord.gg/EUUUvWfkEB" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Join Support Server">💬 Join Support</a>
         </div>
       </div>
-      <div class="floating-icons">
-        <div class="icon shield">🛡️</div>
-        <div class="icon ticket">🎫</div>
-        <div class="icon ban">🔨</div>
-        <div class="icon giveaway">🎉</div>
+      <div class="floating-icons" aria-hidden="true">
+        <div class="icon shield" title="Security">🛡️</div>
+        <div class="icon ticket" title="Tickets">🎫</div>
+        <div class="icon ban" title="Moderation">🔨</div>
+        <div class="icon giveaway" title="Giveaways">🎉</div>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="features container" id="features">
+    <section class="features container" id="features" tabindex="0" aria-label="Features Section">
       <h2>Features</h2>
       <div class="feature-cards">
-        <article class="feature-card glass-card">
-          <div class="icon">🎟</div>
+        <article class="feature-card glass-card" tabindex="0">
+          <div class="icon" aria-hidden="true">🎟</div>
           <h3>Tickets</h3>
           <p>Custom categories, logged, secure</p>
         </article>
-        <article class="feature-card glass-card">
-          <div class="icon">🛡</div>
+        <article class="feature-card glass-card" tabindex="0">
+          <div class="icon" aria-hidden="true">🛡</div>
           <h3>Movement Logs</h3>
           <p>Roles, bans, kicks, approvals with timestamps</p>
         </article>
-        <article class="feature-card glass-card">
-          <div class="icon">🎉</div>
+        <article class="feature-card glass-card" tabindex="0">
+          <div class="icon" aria-hidden="true">🎉</div>
           <h3>Giveaways</h3>
           <p>Timers, auto-reroll, clean embeds</p>
         </article>
-        <article class="feature-card glass-card">
-          <div class="icon">🌍</div>
+        <article class="feature-card glass-card" tabindex="0">
+          <div class="icon" aria-hidden="true">🌍</div>
           <h3>Global Commands</h3>
           <p>Owner-only global ban/silence/kick logging</p>
         </article>
-        <article class="feature-card glass-card">
-          <div class="icon">🔧</div>
+        <article class="feature-card glass-card" tabindex="0">
+          <div class="icon" aria-hidden="true">🔧</div>
           <h3>Role Manager</h3>
           <p>Assign/remove + audit trail</p>
         </article>
-        <article class="feature-card glass-card">
-          <div class="icon">📊</div>
+        <article class="feature-card glass-card" tabindex="0">
+          <div class="icon" aria-hidden="true">📊</div>
           <h3>Analytics</h3>
           <p>Mock preview only; NO payments</p>
         </article>
       </div>
     </section>
 
-    <section class="commands container" id="commands">
+    <section class="commands container" id="commands" tabindex="0" aria-label="Commands Section">
       <h2>Commands</h2>
       <div class="commands-grid">
-        <div class="command-card glass-card">
-          <div class="command-icon">🔨</div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">🔨</div>
           <div class="command-info">
             <h4>/ban</h4>
             <p>Ban a user from the server</p>
           </div>
         </div>
-        <div class="command-card glass-card">
-          <div class="command-icon">👢</div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">👢</div>
           <div class="command-info">
             <h4>/kick</h4>
             <p>Kick a user from the server</p>
           </div>
         </div>
-        <div class="command-card glass-card">
-          <div class="command-icon">🤐</div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">🤐</div>
           <div class="command-info">
             <h4>/silence</h4>
             <p>Mute a user temporarily</p>
           </div>
         </div>
-        <div class="command-card glass-card">
-          <div class="command-icon">🎫</div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">⚠️</div>
           <div class="command-info">
-            <h4>/ticket</h4>
-            <p>Create or manage support tickets</p>
+            <h4>/warn</h4>
+            <p>Warn a user</p>
           </div>
         </div>
-        <div class="command-card glass-card">
-          <div class="command-icon">🎁</div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">🔇</div>
           <div class="command-info">
-            <h4>/giveaway</h4>
-            <p>Start or manage giveaways</p>
+            <h4>/mute</h4>
+            <p>Mute a user indefinitely</p>
           </div>
         </div>
-        <div class="command-card glass-card">
-          <div class="command-icon">🔑</div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">🔈</div>
           <div class="command-info">
-            <h4>/role</h4>
-            <p>Assign or remove roles</p>
+            <h4>/unmute</h4>
+            <p>Unmute a user</p>
+          </div>
+        </div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">🧹</div>
+          <div class="command-info">
+            <h4>/purge</h4>
+            <p>Bulk delete messages</p>
+          </div>
+        </div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">👤</div>
+          <div class="command-info">
+            <h4>/userinfo</h4>
+            <p>Get information about a user</p>
+          </div>
+        </div>
+        <div class="command-card glass-card" tabindex="0">
+          <div class="command-icon" aria-hidden="true">🏰</div>
+          <div class="command-info">
+            <h4>/serverinfo</h4>
+            <p>Get information about the server</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="showcase container" id="showcase">
-      <h2>Showcase</h2>
-      <div class="carousel">
-        <div class="carousel-container">
-          <div class="slide active">
-            <div class="discord-embed">
-              <div class="embed-header">
-                <span class="bot-avatar">🤖</span>
-                <span class="bot-name">IronWatch Security</span>
-                <span class="timestamp">Today at 12:00 PM</span>
-              </div>
-              <div class="embed-content">
-                <p><strong>Movement Log</strong></p>
-                <p>User <code>@Roman</code> was banned by <code>@Moderator</code></p>
-                <p>Reason: Spam</p>
-                <p>Timestamp: 2025-01-01 12:00:00</p>
-              </div>
-              <div class="embed-footer">IronWatch Security • Trusted by Roman</div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="discord-embed">
-              <div class="embed-header">
-                <span class="bot-avatar">🤖</span>
-                <span class="bot-name">IronWatch Security</span>
-                <span class="timestamp">Today at 1:00 PM</span>
-              </div>
-              <div class="embed-content">
-                <p><strong>Ticket Opened</strong></p>
-                <p>Ticket #123 created by <code>@User</code></p>
-                <p>Category: Support</p>
-              </div>
-              <div class="embed-footer">IronWatch Security • Trusted by Roman</div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="discord-embed">
-              <div class="embed-header">
-                <span class="bot-avatar">🤖</span>
-                <span class="bot-name">IronWatch Security</span>
-                <span class="timestamp">Today at 2:00 PM</span>
-              </div>
-              <div class="embed-content">
-                <p><strong>Giveaway Ended</strong></p>
-                <p>Winner: <code>@Winner</code></p>
-                <p>Prize: Discord Nitro</p>
-              </div>
-              <div class="embed-footer">IronWatch Security • Trusted by Roman</div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-btn prev">‹</button>
-        <button class="carousel-btn next">›</button>
+    <section class="testimonials container" id="testimonials" tabindex="0" aria-label="Testimonials Section">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial-cards">
+        <article class="testimonial-card glass-card" tabindex="0">
+          <p>"IronWatch Security has transformed how we manage our Discord server. The moderation tools are powerful and easy to use."</p>
+          <footer>- Alex D.</footer>
+        </article>
+        <article class="testimonial-card glass-card" tabindex="0">
+          <p>"The ticket system and giveaways make community engagement seamless. Highly recommend IronWatch!"</p>
+          <footer>- Jamie L.</footer>
+        </article>
+        <article class="testimonial-card glass-card" tabindex="0">
+          <p>"Reliable, fast, and packed with features. IronWatch is a must-have for any serious Discord admin."</p>
+          <footer>- Morgan S.</footer>
+        </article>
       </div>
+    </section>
+
+    <section class="faq container" id="faq" tabindex="0" aria-label="Frequently Asked Questions">
+      <h2>Frequently Asked Questions</h2>
+      <dl>
+        <dt tabindex="0">How do I invite IronWatch to my server?</dt>
+        <dd>Click the "Invite Bot" button at the top and authorize the bot with the required permissions.</dd>
+        <dt tabindex="0">Is IronWatch free to use?</dt>
+        <dd>Yes, IronWatch offers a free tier with essential features and premium options for advanced needs.</dd>
+        <dt tabindex="0">How do I get support?</dt>
+        <dd>Join our support Discord server via the "Join Support" button or contact us through the website.</dd>
+      </dl>
+    </section>
+
+    <section class="demo container" id="demo" tabindex="0" aria-label="Demo Video">
+      <h2>See IronWatch in Action</h2>
+      <video controls width="100%" aria-label="Demo video of IronWatch Security bot features">
+        <source src="demo-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </section>
   </main>
 
-  <footer class="footer" id="support">
+  <footer class="footer" id="support" role="contentinfo">
     <div class="glow-divider"></div>
     <div class="container">
       <p>IronWatch Security © 2025 — Built for Discord communities</p>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Footer Links">
         <a href="https://discord.gg/EUUUvWfkEB" target="_blank" rel="noopener noreferrer">Discord</a>
         <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="Back to top">↑</button>
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 </body>
 </html>

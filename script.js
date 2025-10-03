@@ -47,7 +47,7 @@ themeToggleBtn.addEventListener('click', toggleTheme);
 setTheme(darkTheme);
 themeToggleBtn.textContent = '🌗';
 
-// Smooth scroll for nav links
+// Smooth scroll for navbar links
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -59,40 +59,110 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Carousel functionality
+// Back to top button
+const backToTopBtn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = 'block';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Entrance animations on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.container, .hero-content, .feature-card, .command-card, .discord-embed').forEach(el => {
+  observer.observe(el);
+});
+
+// Carousel functionality for showcase
 const carouselContainer = document.querySelector('.carousel-container');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 let currentIndex = 0;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
+function updateCarousel() {
+  slides.forEach((slide, index) => {
+    slide.classList.toggle('active', index === currentIndex);
   });
 }
 
 prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
+  updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
+  updateCarousel();
 });
 
-// Back to top button
-const backToTopBtn = document.getElementById('back-to-top');
+updateCarousel();
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add('show');
-  } else {
-    backToTopBtn.classList.remove('show');
+// Particle background animation
+const canvas = document.createElement('canvas');
+canvas.style.position = 'fixed';
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.width = '100%';
+canvas.style.height = '100%';
+canvas.style.zIndex = '-1';
+canvas.style.pointerEvents = 'none';
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext('2d');
+let particlesArray;
+
+function initParticles() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  particlesArray = [];
+  const numberOfParticles = Math.floor((canvas.width * canvas.height) / 8000);
+  for (let i = 0; i < numberOfParticles; i++) {
+    particlesArray.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 1,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+    });
   }
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particlesArray.forEach(p => {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(88, 166, 255, 0.5)';
+    ctx.shadowColor = 'rgba(138, 63, 252, 0.7)';
+    ctx.shadowBlur = 10;
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    p.x += p.speedX;
+    p.y += p.speedY;
+
+    if (p.x < 0 || p.x > canvas.width) p.speedX = -p.speedX;
+    if (p.y < 0 || p.y > canvas.height) p.speedY = -p.speedY;
+  });
+  requestAnimationFrame(animateParticles);
+}
+
+window.addEventListener('resize', () => {
+  initParticles();
 });
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+initParticles();
+animateParticles();
