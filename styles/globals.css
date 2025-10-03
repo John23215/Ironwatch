@@ -1,50 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: linear-gradient(270deg, #1f1f3f, #2a2a5a, #1f1f3f);
-  background-size: 600% 600%;
-  animation: gradient-wave 20s ease infinite;
-  min-height: 100vh;
-  color: #c9d1d9;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cyber-dark text-text-primary font-poppins;
+    background: linear-gradient(-45deg, #0a0a0a, #1a1a1a, #0f0f23, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradient-x 15s ease infinite;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-orbitron font-bold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
 }
 
-@keyframes gradient-wave {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@layer components {
+  .glass-card {
+    @apply bg-glass-bg backdrop-blur-md border border-glass-border rounded-xl shadow-glass;
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    @apply shadow-neon-purple;
+    transform: translateY(-5px);
+  }
+
+  .neon-text-blue {
+    @apply text-neon-blue;
+    text-shadow: 0 0 10px #00d4ff;
+  }
+
+  .neon-text-purple {
+    @apply text-neon-purple;
+    text-shadow: 0 0 10px #8a3ffc;
+  }
+
+  .btn-primary {
+    @apply bg-neon-blue text-cyber-dark font-semibold py-3 px-8 rounded-full shadow-neon-blue;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    @apply bg-neon-purple shadow-neon-purple;
+  }
+
+  .btn-secondary {
+    @apply bg-neon-purple text-white font-semibold py-3 px-8 rounded-full shadow-neon-purple;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-neon-blue shadow-neon-blue;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
-.glass-card {
-  @apply bg-dark-card border border-white/10 backdrop-blur-md rounded-2xl shadow-lg;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.glass-card:hover {
-  box-shadow: 0 0 20px rgba(138, 63, 252, 0.5);
-  transform: translateY(-5px);
-}
-
-.btn {
-  @apply px-8 py-4 text-lg font-bold rounded-full cursor-pointer transition-all duration-300 shadow-lg;
-}
-
-.btn-primary {
-  @apply bg-neon-blue text-dark-bg;
-}
-
-.btn-primary:hover {
-  @apply bg-neon-purple text-white;
-  box-shadow: 0 0 25px rgba(88, 166, 255, 0.5);
-}
-
-.btn-secondary {
-  @apply bg-neon-purple text-dark-bg;
-}
-
-.btn-secondary:hover {
-  @apply bg-neon-blue text-white;
-  box-shadow: 0 0 25px rgba(138, 63, 252, 0.5);
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
