@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f1f, #1a1a2e);
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  padding: 100px 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 3em;
+  color: #00f0ff;
+  text-shadow: 0 0 20px #00f0ff;
+}
+
+.btn {
+  background: #00f0ff;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #7700ff;
+  color: white;
+  box-shadow: 0 0 20px #7700ff;
+}
+
+.features {
+  padding: 50px 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.commands {
+  padding: 50px 20px;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+footer {
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  margin-top: 50px;
+}
